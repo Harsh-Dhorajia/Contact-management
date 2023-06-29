@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
   extended: false,
 }));
 
-// require('./routes')(app);
+require('./routes')(app);
 
 db.sequelize.sync({ alter: true })
   // eslint-disable-next-line promise/always-return
