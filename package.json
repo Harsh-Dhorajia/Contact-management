@@ -5,6 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/",
+    "docker:ls": "docker image ls",
+    "docker:ps": "docker container ls",
+    "docker:build": "docker build --file Dockerfile --tag=helloworld .",
+    "docker:run": "docker run -p 3000:3000 -d --name=helloworld helloworld",
+    "docker:stop": "docker stop helloworld",
+    "docker:shell": "docker run -it -p 3000:3000 helloworld bash",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
