@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     linkedId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     linkPreference: {
       type: DataTypes.STRING,
@@ -27,8 +27,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     deletedAt: {
       type: 'TIMESTAMP',
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-      allowNull: false,
+      defaultValue: null,
+      allowNull: true,
     },
   });
   return Contacts;
